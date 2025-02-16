@@ -1,0 +1,19 @@
+name: configuration variable
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  RepositoryVariable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: configuration variable
+        run: echo "value stored in repositoy, environment level."
+
+      - name: requirements
+        run: echo "Developer must know the ${{vars.project_01}}"
+        
+      - name: new variable
+        run: echo "new variable is ${{vars.company}}"
