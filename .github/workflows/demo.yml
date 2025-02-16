@@ -1,0 +1,17 @@
+name: Testing workflow variables
+on:
+  workflow_dispatch:
+
+env:
+  code1: GitHub 
+  code2: GitHub Action
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: "Welcome"
+      run: echo "Hello world from PUJA through $code1"
+      
+    - name: "Current Learning"
+      run: echo "Learning $code2"
